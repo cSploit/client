@@ -1,5 +1,5 @@
 **/node_modules
 **/DS_STORE
 www/*
-platforms/
-plugins/
+platforms/*
+plugins/*
