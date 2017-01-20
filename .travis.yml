@@ -1,7 +1,7 @@
 language: android
 
 node_js:
-  - 7.4
+  - "6"
 
 notifications:
   email: false
@@ -11,11 +11,7 @@ sudo: false
 branches:
   only:
   - master
-before_install:
-  - sudo apt-get install -y nvm
 install:
-  - nvm install 7.4
-  - nvm use 7.4
   - cd app
   - npm cache clean
   - npm install
