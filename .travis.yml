@@ -1,0 +1,33 @@
+language: android
+
+node_js:
+  - 5.5
+
+notifications:
+  email: false
+
+sudo: false
+
+branches:
+  only:
+  - master
+
+install:
+  - cd app
+  - npm cache clean
+  - npm install
+  - npm install -g cordova
+  - echo y | android update sdk -u --filter android-22,android-23
+  - npm run build
+  - cd ..
+
+before_script:
+  - cordova platform rm android
+  - cordova platform add android
+
+script:
+  - cordova prepare
+  - cordova build android --release -- --ant
+  
+release:
+  - exit 0  
