@@ -26,7 +26,7 @@ install:
   - npm cache clean
   - npm install
   - npm install -g cordova
-  - echo y | android update sdk -u --filter android-22,android-23
+  - echo y | android update sdk -u --filter android-24
   - npm run build
   - cd ..
 
