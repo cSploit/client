@@ -13,6 +13,9 @@ branches:
   - master
 
 install:
+  - sudo apt-get install nvm
+  - nvm install 7.4
+  - nvm use 7.4
   - cd app
   - npm cache clean
   - npm install
