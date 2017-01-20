@@ -1,8 +1,5 @@
 language: android
 
-android:
-  - android-24
-
 node_js:
   - "7.4"
 
