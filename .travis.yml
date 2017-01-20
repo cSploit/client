@@ -11,9 +11,9 @@ sudo: false
 branches:
   only:
   - master
-
+before_install:
+  - sudo apt-get install -y nvm
 install:
-  - sudo apt-get install nvm
   - nvm install 7.4
   - nvm use 7.4
   - cd app
