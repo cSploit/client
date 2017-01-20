@@ -1,5 +1,8 @@
 language: android
 
+android:
+  - android-24
+
 node_js:
   - "7.4"
 
@@ -26,7 +29,7 @@ install:
   - npm cache clean
   - npm install
   - npm install -g cordova
-  - echo y | android update sdk -u --filter android-24
+  - echo y | android update sdk --no-ui --all --filter android-24
   - npm run build
   - cd ..
 
