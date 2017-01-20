@@ -1,5 +1,5 @@
 # client
-The official web client for the cSploit daemon
+The official web client for the cSploit daemon [![Build Status](https://travis-ci.org/cSploit/client.svg?branch=master)](https://travis-ci.org/cSploit/client)
 
 
 
