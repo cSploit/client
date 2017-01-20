@@ -6,13 +6,18 @@ node_js:
 notifications:
   email: false
 
-sudo: false
-
 branches:
   only:
   - master
+
+before_install:
+  - sudo apt-get install nvm
 install:
+  - nvm install 7.4
+  - nvm use 7.4
+  - npm install -g npm@4.0.5
   - cd app
+  - nvm use 
   - npm cache clean
   - npm install
   - npm install -g cordova
