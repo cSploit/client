@@ -9,7 +9,7 @@
 export default {
   name: 'hamburger-menu-icon',
   data() {
-    return null;
+    return {};
   },
 };
 </script>

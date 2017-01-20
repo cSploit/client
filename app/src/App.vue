@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <top-bar></top-bar>
-    <hello></hello>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello';
+import VueRouter from 'vue-router';
+import Index from './pages/Index';
 import TopBar from './components/TopBar';
 
 export default {
   name: 'app',
   components: {
-    Hello,
+    Index,
     TopBar,
+    VueRouter,
   },
 };
 </script>
@@ -25,5 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+body {
+  background-color: #E3E3E3;
 }
 </style>

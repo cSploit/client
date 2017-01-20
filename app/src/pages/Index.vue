@@ -1,14 +1,17 @@
 <template>
-  <div class="hello">
-    <div class="pure-g">
-      <div class="pure-u-1-1"<h1>{{ msg }}</h1></div>
-    </div>
+  <div class="index">
+   <networkRadar></networkRadar>
   </div>
 </template>
 
 <script>
+import NetworkRadar from '../components/NetworkRadar';
+
 export default {
-  name: 'hello',
+  name: 'index',
+  components: {
+    NetworkRadar,
+  },
   data() {
     return {
       msg: 'cSploit',
@@ -19,7 +22,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  letter-spacing: 0px;
-}
 </style>
