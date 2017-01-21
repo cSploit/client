@@ -1,16 +1,15 @@
-# client
+# cSploit 2 client
 The official web client for the cSploit daemon [![Build Status](https://travis-ci.org/cSploit/client.svg?branch=master)](https://travis-ci.org/cSploit/client)
-
 
 
 ## Build process
 
 ```shell
 cd app
-npm run build #output will be cordova's www folder
+npm run build #Output will be cordova's www folder
 cd ..
-cordova build android #or iOs
-#cordova emulate android/iOs
+cordova build android #Or iOS, make sure to have installed the platform which you want to target
+cordova emulate android/iOS #It will run the .APK/.IPA file on a local emulator
 ```
 
 
