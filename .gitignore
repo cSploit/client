@@ -1,0 +1,7 @@
+**/node_modules
+**/DS_STORE
+www/*
+platforms/*
+plugins/*
+npm-debug.log
+package-lock.json
