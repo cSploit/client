@@ -7,8 +7,6 @@ android:
     - platform-tools
     - build-tools-24.0.2
     - android-24
-node_js:
-  - "8.1.1"
 
 jdk:
   - oraclejdk8
@@ -27,18 +25,11 @@ notifications:
 install:
   - nvm install 8.1.1
   - nvm use 8.1.1
-  - npm install -g npm
-  - npm install -g cordova
-  - echo y | android update sdk --no-ui --all --filter android-24
 
 script:
-  - cd app
   - npm install
   - npm run build
-  - cd ..
-  - cordova platform add android
-  - cordova prepare
-  - cordova build android --release -- --ant
+  - npm run android
   
 release:
   - exit 0  
