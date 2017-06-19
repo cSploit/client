@@ -24,10 +24,6 @@ notifications:
     rooms:
       - csploit:BYr15dcnal0Dm6UZRafBqWSC#travis
 
-branches:
-  only:
-  - master
-
 install:
   - nvm install 8.1.1
   - nvm use 8.1.1
