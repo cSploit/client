@@ -32,19 +32,15 @@ install:
   - nvm install 8.1.1
   - nvm use 8.1.1
   - npm install -g npm
-  - cd app
-  - npm cache clean
-  - npm install
   - npm install -g cordova
   - echo y | android update sdk --no-ui --all --filter android-24
-  - npm run build
-  - cd ..
-
-before_script:
-  - cordova platform rm android
-  - cordova platform add android
 
 script:
+  - cd app
+  - npm install
+  - npm run build
+  - cd ..
+  - cordova platform add android
   - cordova prepare
   - cordova build android --release -- --ant
   
