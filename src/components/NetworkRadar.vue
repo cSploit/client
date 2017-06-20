@@ -13,7 +13,7 @@ import axios from 'axios'
 
 let network = []
 function updateNetwork () {
-  axios.get('/hosts').then((result) => { network = JSON.parse(result) })
+  axios.get('/hosts').then((result) => { network = result.data })
 }
 
 setInterval(updateNetwork, 5000)
