@@ -5,10 +5,9 @@ android:
     - tools # to get the new `repository-11.xml`
     - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
     - platform-tools
-    - build-tools-24.0.2
-    - android-24
-node_js:
-  - "8.1.1"
+    - build-tools-25.0.2
+    - android-25
+    - extra-android-m2repository
 
 jdk:
   - oraclejdk8
@@ -24,29 +23,13 @@ notifications:
     rooms:
       - csploit:BYr15dcnal0Dm6UZRafBqWSC#travis
 
-branches:
-  only:
-  - master
-
 install:
   - nvm install 8.1.1
   - nvm use 8.1.1
-  - npm install -g npm
-  - cd app
-  - npm cache clean
-  - npm install
-  - npm install -g cordova
-  - echo y | android update sdk --no-ui --all --filter android-24
-  - npm run build
-  - cd ..
-
-before_script:
-  - cordova platform rm android
-  - cordova platform add android
 
 script:
-  - cordova prepare
-  - cordova build android --release -- --ant
+  - npm install
+  - npm run build
   
 release:
   - exit 0  
